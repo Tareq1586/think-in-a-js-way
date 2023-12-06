@@ -1,0 +1,3 @@
+<h1>AJAX is not a programming language</h1>
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi magni delectus deleniti necessitatibus amet repellat! Voluptates eveniet laborum voluptatum culpa accusamus distinctio tempore dignissimos aliquam debitis? Voluptatem est beatae blanditiis.
