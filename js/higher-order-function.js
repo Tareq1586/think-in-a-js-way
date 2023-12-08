@@ -1,9 +1,11 @@
+// we can put a property inside a function
 // function hello() {
 //   console.log('Hello World!');
 // }
 // hello.language = 'JavaScript';
 // console.log(hello.language);
 
+// also we can put a function inside a function
 // function hello() {
 //   return function () {
 //     console.log('Hello World');
@@ -20,6 +22,7 @@
 // };
 // console.dir(str);
 
+// multiply each array element by 2 and  form a new array
 // Without higher order function
 // var numbers = [1, 2, 3];
 // var result = [];
