@@ -5,25 +5,16 @@
 // console.log(symbol2);
 // console.log(symbol1 === symbol2);
 
-// object represenaion of a  primitive value
-// var cricketer = new String('Sakib');
-// console.log(cricketer);
-
-// symbol has no string representation
+// symbol has no object representation
 // var person = new Symbol();
 // console.log(person);
-
-// symbol is an unique identifier
-// var name1 = Symbol('name1');
-// var name2 = Symbol('name2');
-// console.log(name1 == name2);
 
 // symbol with same identity
 // var symbol1 = Symbol.for('name');
 // var symbol2 = Symbol.for('name');
-// console.log(symbol1 == symbol2);
+// console.log(symbol1 === symbol2);
 
-// we can use the value of a variable as a property of object
+// we can use a variable as a key 
 // var test = 'testtest';
 // var object = {
 //   name: 'Sakib',
@@ -31,8 +22,8 @@
 // };
 // console.dir(object);
 
-// now we can use symbol as a property of an object
-// var cricket = Symbol.for('This is cricket symbol');
+// now we can use symbol as a key
+// var cricket = Symbol.for('This is a cricket symbol');
 // var object = {
 //   name: 'Sakib',
 //   [cricket]: 'Bangladesh',
@@ -71,14 +62,12 @@
 // console.log(myArray['includes'](2));
 
 // overriding includes method with our own includes method
-// var includes = Symbol('My own array includes method');
+// var includes = Symbol('My own symbol');
 // Array.prototype[includes] = () => {
 //   console.log('This is my array includes function');
 // };
 // var myArray = [1, 2, 3];
-// console.log(myArray.includes(2));
-// console.log(myArray['includes'](2));
-// myArray[includes](2);
+// myArray[includes]();
 
 // var title = 'JavaScript';
 // console.log(title.search('Script'));
@@ -88,23 +77,19 @@
 // var title = 'JavaScript';
 // console.log(title.search(/Script/));
 
-// practice
-// var laptopp = new String('laptop');
-
-// implement a symbol
+// implementing my own symbol
 // class Product {
 //   constructor(title) {
 //     this.title = title;
 //   }
-
 //   [Symbol.search](string) {
-//     return string.indexOf(this.title) >= 0 ? 'found' : 'not found';
+//     // return string.indexOf(this.title) >= 0 ? 'found' : 'not found';
+//     return string.indexOf(this.title);
 //   }
 // }
-// console.log('javascript'.search('script'));
+// // console.log('javascript'.search('script'));
 // var laptop = new Product('laptop');
-// var laptop = 'laptop';
-// console.log('HP aptop'.search(laptop));
+// console.log('HP laptop'.search(laptop));
 
 // symbol can not be deleted
 // function myFunction() {
