@@ -3,9 +3,6 @@
 // new binding
 // window binding
 
-// var printPlayerName = function (name) {
-//   console.log(name);
-// };
 // var sakib = {
 //   name: 'Sakib',
 //   age: 35,
@@ -30,7 +27,6 @@
 // };
 // printPlayerNameFunction(sakib);
 // sakib.printPlayerName();
-// console.log(printPlayerNameFunction);
 
 // var Person = function (name, age) {
 //   return {
@@ -51,6 +47,31 @@
 // sakib.printName();
 // sakib.father.printName();
 
+// explicit binding
+// call()
+// var printName = function () {
+//   console.log(`The player name is: ${this.name}`);
+// };
+// var sakib = {
+//   name: 'Sakib',
+//   age: 35,
+// };
+// printName.call(sakib);
+
+// call() with parameter
+// var printName = function (v1, v2, v3) {
+//     console.log(`${this.name} is ${v1}, ${v2} & ${v3}`);
+//   };
+//   var sakib = {
+//     name: 'Sakib',
+//     age: 35,
+//   };
+//   var v1 = 'handsoome';
+//   var v2 = 'all-rounder';
+//   var v3 = 'best player';
+//   printName.call(sakib, v1, v2, v3);
+
+// apply()
 // var printName = function (v1, v2, v3) {
 //   console.log(`${this.name} is ${v1}, ${v2} & ${v3}`);
 // };
@@ -58,20 +79,37 @@
 //   name: 'Sakib',
 //   age: 35,
 // };
-// var v1 = 'handsoome';
+// var v1 = 'handsome';
 // var v2 = 'all-rounder';
-// var v3 = 'best player';
+// var v3 = 'politician';
 // var v = [v1, v2, v3];
-// var myFunc = printName.bind(sakib, v1, v2, v3);
+// printName.apply(sakib, v);
+
+// bind()
+// var printName = function (v1, v2, v3) {
+//   console.log(`${this.name} is ${v1}, ${v2} & ${v3}`);
+// };
+// var sakib = {
+//   name: 'Sakib',
+//   age: 35,
+// };
+// var v1 = 'handsome';
+// var v2 = 'all-rounder';
+// var v3 = 'politician';
+// const myFunc = printName.bind(sakib, v1, v2, v3);
 // myFunc();
 
+// new binding
 // function Person(name, age) {
+//     // const this = Object.create(null);
 //   this.name = name;
 //   this.age = age;
+// // return this;
 // }
 // var sakib = new Person('Sakib', 35);
 // console.log(sakib);
 
+// window binding
 // var printName = function () {
 //   console.log(this);
 // };
@@ -80,3 +118,17 @@
 //   age: 35,
 // };
 // printName();
+
+// using strict
+// "use strict";
+// var printName = function () {
+//   console.log(this);
+// };
+// var sakib = {
+//   name: 'Sakib',
+//   age: 35,
+// };
+// printName();
+
+
+

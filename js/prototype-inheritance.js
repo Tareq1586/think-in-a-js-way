@@ -28,7 +28,6 @@
 // console.dir(tamim);
 
 // var f = function Person() {
-
 // };
 // console.dir(f);
 
@@ -57,7 +56,6 @@
 // Cricketer.prototype = Object.create(Person.prototype);
 // Cricketer.prototype.constructor = Cricketer;
 // const sakib = new Cricketer('Sakib', 35, 'All-rounder', 'Bangladesh');
-// console.dir(Cricketer.prototype);
 // sakib.eat();
 
 // class Person {
