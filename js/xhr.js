@@ -1,9 +1,10 @@
 const getButon = document.getElementById('get-button');
 const sendButton = document.getElementById('send-button');
+const updateButton = document.getElementById('update-button');
 const sendRequest = function (method, url, data) {
   const promise = new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
-    // GET, POST, PUT, DEETE, OPTION, HEAD
+    // GET, POST, PUT, DELETE, OPTION, HEAD
     xhr.open(method, url);
     xhr.responseType = 'json';
     xhr.setRequestHeader('content-type', 'application/json');
@@ -16,7 +17,7 @@ const sendRequest = function (method, url, data) {
       }
     };
     xhr.onerror = function () {
-      reject('Something is wrong');
+      reject('something went wrong!');
     };
   });
   return promise;
@@ -25,6 +26,9 @@ const getData = function () {
   sendRequest('GET', 'https://jsonplaceholder.typicode.com/posts/1')
     .then((responseData) => {
       console.log(responseData);
+    })
+    .catch((err)=>{
+      console.log(`The error was ${err}`)
     });
 };
 const sendData = function () {
@@ -37,8 +41,25 @@ const sendData = function () {
       console.log(responseData);
     })
     .catch((err) => {
-      console.log(`The error is ${err}`);
+      console.log(`The error was ${err}`);
     });
 };
+const updateData = function(){
+  sendRequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', JSON.stringify(
+    {
+      id: 1,
+      title: 'foo',
+      body: 'barr',
+      userId: 1,
+    }
+  ))
+  .then((res)=>{
+    console.log(res);
+  })
+  .catch((err)=>{
+    console.log(err);
+  });
+}
 getButon.addEventListener('click', getData);
 sendButton.addEventListener('click', sendData);
+updateButton.addEventListener('click', updateData);
