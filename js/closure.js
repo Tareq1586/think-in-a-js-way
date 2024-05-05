@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // every function must hold a scope 
+=======
+// every function declared in window object, must hold parent window object as scope(property) 
+>>>>>>> a2cecc4bb48636e8a997421e28d2bcf063e8f96c
 // var sum = function(num1, num2){
 //     return num1 + num2;
 // };
@@ -35,7 +39,10 @@
 // })()
 
 // practical example of closure
+<<<<<<< HEAD
 // we can see the private property because of closure
+=======
+>>>>>>> a2cecc4bb48636e8a997421e28d2bcf063e8f96c
 // function bankAccount(initialBalance){
 //     var balance = initialBalance;
 //     return function(){
