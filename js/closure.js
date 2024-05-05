@@ -1,15 +1,28 @@
+// every function declared in window object, must hold parent window object as scope(property) 
 // var sum = function(num1, num2){
 //     return num1 + num2;
 // };
-// console.log(sum(2,3));
 // console.dir(sum);
+
+// lexical scoping: child can acess parent's property
 // var num1 = 2;
 // var num2 = 3;
 // var sum = function(){
 //     return num1 + num2;
 // }
-// console.log(sum());
 // console.dir(sum);
+
+// clousure is introduced
+// clousure is a funcion with some remembered value
+// var num1 = 2;
+// var sum = function(){
+//     var num2 = 3;
+//     return function(){
+//         return num1 + num2;
+//     }
+// }
+// console.dir(sum());
+
 // (function(){
 //     var num1 = 2;
 //     var sum = function(){
@@ -20,6 +33,8 @@
 //     }
 //     console.dir(sum);
 // })()
+
+// practical example of closure
 // function bankAccount(initialBalance){
 //     var balance = initialBalance;
 //     return function(){
@@ -28,6 +43,7 @@
 // }
 // var account = bankAccount(100000);
 // console.dir(account);
+
 // (function(){
 //     var num1 = 2;
 // var num2 = 3;
