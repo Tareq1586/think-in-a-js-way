@@ -3,6 +3,7 @@
 // new binding
 // window binding
 
+// implicit binding
 // var sakib = {
 //   name: 'Sakib',
 //   age: 35,
@@ -12,6 +13,7 @@
 // };
 // sakib.printPlayerName();
 
+// implicit binding 2
 // var printPlayerNameFunction = function (obj) {
 //   obj.printPlayerName = function () {
 //     console.log(this.name);
